@@ -41,3 +41,22 @@
 * GitHub works at remote level
 * Git is useful for an individual developer because it saves work and keeps it's history. Don't need internet to save work, and once connected can push it out. Can understand when and why you made changes to file
 * Git and GitHub are useful for a team of developers because there are histories as to why a file was changed and by whom. What the change was. It also backs up everything through GIT, every clone is a backup. Can merge changes to a file in its final state
+
+# GIT Test notes
+* **origin** is the name of th eremote connection
+* atomic commits
+    * commit that includes changes to only one feature or task of program
+
+# Knowledge Check
+* to copy a repo over to local machine, `git clone <ssh_link to repo>`
+* Default name of remote connection is `origin`
+* `origin` in `git push origin main` means a commit is being pushed to the remote repository/connection
+* `main` in `git push origin main` means it is being pushed to the `main` branch in the remote repository
+* Two Stage system
+    * Staging
+        * `git add <file>`
+    * committed
+        * `git commit -m "<message>"`
+* `git status` is way to check status of current repo
+* To push your changes :`git push -u origin main`
+* `git log` to look at history of previous commits
