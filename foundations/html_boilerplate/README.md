@@ -24,3 +24,12 @@
 * `<title>My Web</title>` should always be included in head of HTML document
     * displayed on webpage browser tab
     * default's to it's file name
+
+## Body Element
+* Where all content displayed to user will go
+
+# Knowledge Check
+* Purpose of doctype declaration is for the browser to know what version of html is being used
+* the `<html>` element is known as the root element of the document, and everything else is a descendent of it
+* Purpose of the `<head>` element is to provide information about website, meta information
+* Purpose of the `<body>` is meant for information displayed to the user
