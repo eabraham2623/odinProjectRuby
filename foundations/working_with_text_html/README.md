@@ -25,3 +25,14 @@
 ## HTML Comments
 * `<!-- I am html comment -->` 
     * is an example
+
+# Knowledge Check
+* To create a paragraph use `<p>`
+* To create heading use `<h1>`
+* Different levels of headings rang from 1 to 6, Difference is that 1 is largest text, while 6 is smallest
+* The element to make text bold and important is `<strong>`
+* The element to make text italiczied is `<em>`
+* The relationship that an element has with an nested element is that the nested element are it's children
+* Same level elements are considered to be **siblings**
+* To create HTML comments use:
+    * `<!-- text here -->`
