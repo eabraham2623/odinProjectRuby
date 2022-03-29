@@ -24,4 +24,3 @@
     * Cascading Style Sheets
     * HTML is used for putting paragraphs of text on a web pages
     * CSS is used for changing font and background color of a button
-    
