@@ -25,6 +25,11 @@
 
 `git commit -m "Subject" -m "body"`
 
+# General Tips
+* Use active voice "Fix card generator"
+* Avoid vague commit messages
+* Commit early and often
+
 # Knowledge Check
 * Two benefits of having well written commit messages and good commit history
     1. For collaborative purposes
