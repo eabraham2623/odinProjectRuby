@@ -351,3 +351,26 @@ p {
   <div style="color: white; background-color: black;">...</div>
 </body>
 ```
+
+# Knowledge Check
+* Main differences of types of CSS
+  * External CSS is a separate file of CSS styles defined
+  * Internal CSS are styles defined within the HTML with it's own section (typically under the head element)
+  * Inline is CSS style defined on a particular HTML element within the html file
+  * class = `.<selector>`
+  * Id = `#<selector>`
+  * To apply a single rule to different selectors:
+    * ```css
+        .one, .two {
+          color: white;
+        }
+      ```
+  * Given an element that has an id of `title` and class of `primary`, how would you use both attributes for a single rule
+    * ```css
+      #id.primary {
+        background-color:white;
+      }
+      ```
+    * Chaining selectors = elements that have more than one css style attribute
+  * A descedent combinator allows so that a rule applies only when a descedent has the matching parent
+  * The one class selector will have higher specificity compared to a rule that has 3 type selectors
