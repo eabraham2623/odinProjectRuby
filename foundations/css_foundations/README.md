@@ -166,3 +166,188 @@ p {
     * numeric value or bold
 * `text-align` will align text horizontally within an element,
     * `text-align: center`
+
+### Image Height and Width
+* By default `<img>` height and width values will be same as actual image
+* If you want to adjust size of image without losing proportion, `height` would be set to `auto`
+```css
+img {
+  height: auto;
+  width: 500px;
+}
+```
+* Best to include both properties
+
+## The Cascade of CSS
+### Specificicity
+* CSS declaration that is more specific will take precedence over less specific ones
+1. ID selectors (most specific selector)
+2. Class selectors 
+3. Type selectors
+
+```css
+/* rule 1 */
+.subsection {
+  color: blue;
+}
+
+/* rule 2 */
+.main .list {
+  color: red;
+}
+```
+* rule 2 is more specific because it is using my more class selectors
+
+```css
+/* rule 1 */
+#subsection {
+  color: blue;
+}
+
+/* rule 2 */
+.main .list {
+  color: red;
+}
+```
+* rule 1 is more specific because it is using an ID
+
+```css
+/* rule 1 */
+#subsection .list {
+  background-color: yellow;
+  color: blue;
+}
+
+/* rule 2 */
+#subsection .main .list {
+  color: red;
+}
+```
+* rule 2 is more specific because it is using ID and has more classes
+* `background-color: yellow` would still be applied since there's no conflict
+
+```css
+/* rule 1 */
+.class.second-class {
+  font-size: 12px;
+}
+
+/* rule 2 */
+.class .second-class {
+  font-size: 24px;
+}
+```
+* Chaining classes don't add more specificitiy compared to using multiple classes like in rule 2
+
+```css
+/* rule 1 */
+.class.second-class {
+  font-size: 12px;
+}
+
+/* rule 2 */
+.class > .second-class {
+  font-size: 24px;
+}
+
+```
+* Even though child combinator is used, both rule rules still have two classes, same specificity
+
+```css
+/* rule 1 */
+* {
+  color: black;
+}
+
+/* rule 2 */
+h1 {
+  color: orange;
+}
+```
+* rule 2 would have higher specificity and orange would take precedence
+
+### Inheritance
+* elements descedents inherit properties from parent unless explicity applied to descedent
+```html
+<!-- index.html -->
+
+<div id="parent">
+  <div class="child"></div>
+</div>
+```
+```css
+/* styles.css */
+
+#parent {
+  color: red;
+}
+
+.child {
+  color: blue;
+}
+```
+* `child` class would have it's element have color blue, even though the parent id is more specific
+
+### Rule order
+* Final tiebreaker, whichever rule was last defined is winner if all other cascade rules have been exhausted
+```css
+/* styles.css */
+
+.alert {
+  color: red;
+}
+
+.warning {
+  color: yellow;
+}
+```
+* `.warning` rule would be applied
+
+## Adding CSS to HTML
+
+### External CSS
+```html
+<!-- index.html -->
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+```
+
+```css
+/* styles.css */
+
+div {
+  color: white;
+  background-color: black;
+}
+
+p {
+  color: red;
+}
+```
+* We had self closing `<link>` element inside `head` tags
+* `rel` attribute is require specifies relationship between HTML file and linked file
+
+### Internal CSS
+```html
+<head>
+  <style>
+    div {
+      color: white;
+      background-color: black;
+    }
+
+    p {
+      color: red;
+    }
+  </style>
+</head>
+<body>...</body>
+```
+### incline CSS
+```html
+<body>
+  <div style="color: white; background-color: black;">...</div>
+</body>
+```
