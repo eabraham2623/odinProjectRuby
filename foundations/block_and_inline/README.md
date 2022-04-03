@@ -19,3 +19,11 @@
 
 ## Inline Block vs Inline
 * Inline block, height and width are respected and applied
+
+# Knowledge Check
+* Block elements have new line and inline elements do not
+* inline block element have their height and width respected
+* h1 is a block
+* button is an inline element
+* div is block
+* span is inline
