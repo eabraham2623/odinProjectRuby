@@ -8,3 +8,5 @@
 
 # Knowledge Check
 * To make flex items arrange themselves vertically do: `flex-direction: column`
+* In column flex, `flex-basis` refers to height of itme
+* In row flex, `flex-basis` refers to width of itme
