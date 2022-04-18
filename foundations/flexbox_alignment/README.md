@@ -52,3 +52,19 @@
     * will align items on cross axis
 * `justify-content`
     * align itmes on main axis
+* `align-self`
+    * will align specific item on cross axis
+
+## Changing main axis, `align-items`
+* ![](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container/align4.png)
+* ![](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container/align5.png)
+
+## Aligning content on cross axis, align-content
+* `align-content`
+
+## Aligning content on main axis
+`justify-content`
+
+## Using auto margins for main axis alignment
+* `margin-left: auto`
+    * ![](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container/align7.png)
