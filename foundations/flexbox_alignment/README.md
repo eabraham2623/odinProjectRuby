@@ -93,3 +93,8 @@
   <div></div>
 </div>
 ```      
+
+# Knowledge Check
+* `justify-content` aligns items on the main axes while `align-items` aligns item on the cross axes
+* Flexbox to center an item, do `align-items: center` and `justify-content: center` with `display: flex`
+* difference between `justify-content: space-between` and  `justify-content: space-around` is that `space-between` gives space between all items in container where as `space-around` space is distributed evenly

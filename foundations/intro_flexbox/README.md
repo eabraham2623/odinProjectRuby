@@ -7,3 +7,4 @@
 
 # Knowledge Check
 * Difference between flex container and flex element is that flex containers contain flex elements, containers have `display: flex` property
+* To create a flex item, put it inside the container
