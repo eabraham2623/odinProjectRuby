@@ -34,3 +34,21 @@
 ## Flex Container
 * `display` property to `flex` or `inline-flex`
 * Children of container become flex items
+* `flex-flow: flex-wrap` 
+
+## Properies applied to flex item
+* `flex-grow`
+    * items can grow along main axis from `flex-basis` 
+* `flex-shrink`
+    * item shrinking along main axis
+* `flex-basis`
+    * defines the size of the item
+* Concept of available space
+* flex shorthand
+* `flex: flex-grow, flex-shrink, flex-basis`
+
+## Alignment, justification and distribution of free space between items
+* `align-items`
+    * will align items on cross axis
+* `justify-content`
+    * align itmes on main axis
