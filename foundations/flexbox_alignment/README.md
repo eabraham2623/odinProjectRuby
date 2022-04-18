@@ -68,3 +68,26 @@
 ## Using auto margins for main axis alignment
 * `margin-left: auto`
     * ![](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container/align7.png)
+
+## Use cases of Flexbox
+* Navigation
+
+### Centering item
+```css
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box div {
+  width: 100px;
+  height: 100px;
+}
+      
+```
+```html
+<div class="box">
+  <div></div>
+</div>
+```      
