@@ -71,6 +71,8 @@
 
 ## Use cases of Flexbox
 * Navigation
+* Media objects
+* Form Controls
 
 ### Centering item
 ```css
