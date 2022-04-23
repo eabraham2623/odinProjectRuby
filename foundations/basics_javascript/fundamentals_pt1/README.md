@@ -133,3 +133,19 @@ let b = prompt("Second number?", 2);
 alert(+a + +b); // 3
 
 ```
+# Assignment
+
+1. Refer to `index.html`
+
+# Knowledge Check
+
+1. Three ways to declare variable
+    1. `var`
+    2. `let`
+    3. `const`
+2. Which of the three variables should you avoid and why
+    * should avoid `var`because it is old school and provides different behavior
+3. `%` is modulo
+4. `==` converts to same type and checks equivalence, `===` is strict comparision
+5. Operator precedence is PEMDAS, javascript interprets left to right afterwards
+6. unary plus operator conerts strings to integer (if they are numbers at first)
