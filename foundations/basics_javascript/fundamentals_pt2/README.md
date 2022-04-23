@@ -142,3 +142,13 @@ let message = (login == 'Employee`) ? 'Hello' : (login == 'Director') ? 'Greetin
 
 
 # Knowledge Check
+* Eight data types in Javascript, see above
+* Data type that is not a primitive is `object`
+* Relationship between null and undefined is that `null` is something that represents empty or nothing, while undefined means that there has been assignment done 
+* Term for embedding variables/expressions in a string is called template literal
+* Back tick allows embedding variables and expressions
+* `${...}` to embed variables/expressions
+* To escape characters use `\`
+* Three logical operators are shown above (AND)
+* Comparsion operator above, `<`
+* ternary operator is `?` and `:` combo
