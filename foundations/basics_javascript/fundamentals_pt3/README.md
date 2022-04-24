@@ -141,3 +141,8 @@ let x = average(10, 20);
 
 ### Stack overflow
 * Call stack has fixed size and if number of execution contexts exceed size of stack, stack overflow will occur
+
+# Practice
+* Refer to `practice.js` in this directory
+* Script ran using `node` command, a JavaScript Runtime Environment
+* `node practice.js`
