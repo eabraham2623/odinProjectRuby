@@ -105,3 +105,7 @@ Write a program that takes a user’s input and prints the numbers from one to t
             * what changes senty
 
 ### Hello User is a good program to get a sense of a programming language
+
+## What is Pseudo-Code
+* Writing down logic of solution of problem using plain english
+* 
