@@ -74,3 +74,30 @@ let sum = function(a, b) {
 * Expressions cannot
 
 * I rather stick with function declarations
+
+### Arrow Functions
+```javascript
+// shorter version
+let func = (arg1, arg2, ..., argN) => expression;
+
+// longer version
+let func = function(arg1, arg2, ..., argN) {
+  return expression;
+};
+```
+Example:
+```javascript
+let sum = (a, b) => a + b;
+
+/* This arrow function is a shorter form of:
+
+let sum = function(a, b) {
+  return a + b;
+};
+*/
+
+alert( sum(1, 2) ); // 3
+```
+* Useful for simple actions, one-liners
+    * Without curly brace `(...args) => expression`
+    * With curly braces `(...args) => { body }`, multiline with explicit return
