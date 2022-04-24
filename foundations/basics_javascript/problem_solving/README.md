@@ -62,3 +62,46 @@ Write a program that takes a user’s input and prints the numbers from one to t
     * Debug: Go step by step through your solution trying to find where you went wrong. Programmers call this debugging (in fact, this is all a debugger does).
     * Reassess: Look at problem from another perspective
     * Research: Find solutions to SUB PROBLEMS, rather than the big problem
+
+## How to think Like A Programmer - Video Notes
+* How to be as stupid as a computer :)
+* Good programmers aren't alwasy good teachers
+* Programming isn't about languages
+* Not a lot of memorizing
+* Most programming isn't about math
+* Programming languages simpler than human ones
+* Explaining things to idiot computer
+* Write out concepts first, then convert to code later
+* Code explains the comments to the computer
+
+### Eight Concepts of Coding
+1. Make a new Variable
+    * Name - What do we call thing?
+    * Type - What type of data does it contain
+    * InitVal - InitVal what is it's starting alue
+    * Algorithm:
+        * Create variable name of type type that starts with value initVal
+2. Output
+    * message: text to write to user
+    * Output code
+3. Input
+    * variable: where answer from user will be stored
+    * message: question being asked of the user
+4. Failure is WONDERFUL!
+    * Normal part of programming
+    * Begin debugging
+5. How to debug
+    * best way to debug is to not have bugs
+    * What am I not understanding?
+    * Tools I can use?
+6. Loop
+    * for loop
+        * Sentry
+            * variable that will control loop
+        * start
+        * end
+            * what will cause it to end
+        * change
+            * what changes senty
+
+### Hello User is a good program to get a sense of a programming language
