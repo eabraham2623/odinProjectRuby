@@ -108,4 +108,18 @@ Write a program that takes a user’s input and prints the numbers from one to t
 
 ## What is Pseudo-Code
 * Writing down logic of solution of problem using plain english
-* 
+* Whiteboarding the problem
+    * Broad overview of what needs to happen
+    * filling in each part that requires more detail
+
+# Knowledge Check
+* 3 stages to problem solving:
+    1. Plan
+    2. PseudoCode
+    3. Divide and Conquer
+* It is important to understand the problem first otherwise your solution could be totally wrong and waste time
+* You can rewrite the problem in your own words so you understand it better
+* Understanding the inputs and outputs will help in the planning stage of the problem solving process
+* An algorithm is a set of instructions to perform a task or solution
+* Pseudocode is a set of instrucions written in plain english, not code for an attempted solution
+* Advantages of breaking problem down and solving include solving simpler problems first, which in turn helps solve the bigger problems
