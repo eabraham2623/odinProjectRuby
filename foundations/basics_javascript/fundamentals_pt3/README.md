@@ -146,3 +146,12 @@ let x = average(10, 20);
 * Refer to `practice.js` in this directory
 * Script ran using `node` command, a JavaScript Runtime Environment
 * `node practice.js`
+
+# Knowledge Check
+* Functions are useful for packaging reusuable code, rather than typing same code multiple times
+* Invoking a function calling function name followed by parantheses
+* Anonymous functions are functions with no name
+    * often the case a function parameter is passed as an anonymous function
+* Function scope determines the bounds of a function and invocation. Variables and other things defined are locked within the function's scope
+* Return values are what functions calculate and provide as result to use 
+* Arrow functions are functional expressions, another form of syntax to create functions
