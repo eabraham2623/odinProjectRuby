@@ -21,3 +21,56 @@
     * `undefined` by default if no value given
 * Functions are actions
 * Have them be verbs, brief and accurate
+* Function Expression:
+```javascript
+let sayHi = function() {
+  alert( "Hello" );
+};
+```
+* Function is a value:
+```javascript
+function sayHi() {
+  alert( "Hello" );
+}
+
+alert( sayHi ); // shows the function code
+```
+* Adding parantheses invokes the function
+
+### Callback function
+* Function passed into another function as argument
+```javascript
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+function showOk() {
+  alert( "You agreed." );
+}
+
+function showCancel() {
+  alert( "You canceled the execution." );
+}
+
+// usage: functions showOk, showCancel are passed as arguments to ask
+ask("Do you agree?", showOk, showCancel);
+```
+
+### Function Declaration vs Function Expression
+```javascript
+// Function Declaration
+function sum(a, b) {
+  return a + b;
+}
+
+// Function Expression
+let sum = function(a, b) {
+  return a + b;
+};
+```
+* Declarations can be used before they are defined
+    * Within the function declaration code block
+* Expressions cannot
+
+* I rather stick with function declarations
