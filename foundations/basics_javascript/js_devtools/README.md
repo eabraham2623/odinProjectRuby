@@ -33,3 +33,9 @@
 * Function
     * calling `debug(functionName)` to debug speciifc function
 * [Reference](https://developer.chrome.com/docs/devtools/javascript/breakpoints/)
+
+# Knowledge Check
+* To open dev tools, right click and select Inspect
+* Changing the screen size while using dev tools invovles selecting "Responsive" and pushing and pulling the bars to adjust screen size, can also select predefined sizes
+* A breakpoint is a selected pause in your code in order to help debug issues
+* To set a breakpoint, refer to `Pause your code with breakpoints` section in README
