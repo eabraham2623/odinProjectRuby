@@ -36,3 +36,8 @@
 
 ### Code Tells You How, Comments Tell You Why
 * Code can't explain why a program is being written
+
+## Knowledge Check
+* It's important to write clean code so that your code is readable and easy to understand
+* Bad comments are vague statements, chunks of code etc.
+* Good comments explain why, authoriong specificiation
