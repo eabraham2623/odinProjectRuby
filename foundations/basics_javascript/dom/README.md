@@ -230,3 +230,28 @@ buttons.forEach((button) => {
     * dblclick
     * keydown
     * keyup
+
+## Practice
+* Refer to `JavaScript30` repository
+* Event Bubbling and Capturing
+    * Event occurs in an element inside other element
+    * Bubbling
+        * captured and handled by innermost then propagated to outer
+    * Captured
+        * Captured by outermost and propagated to inner
+    * Trickle down, bubble up
+
+## Knowledge Check
+* Document Object Model
+* To target the nodes you want to work with, you use `querySelector`
+* To create element use, `createElement`
+* To add element use `appendChild` or `insertBefore`
+* To remove element use `removeChild`
+* To alter use `style.<property>` or `setAttribute`
+* Use `textContent` because it is more secure
+* Use `defer` for script
+* Events are actions that occur on the page, and listeners wait for the event to occur and perform action
+* Attach listeners to groups of nodes by iterating through them
+* `querySelectorAll` returns nodelist while `querySelector` returns reference to first match selector
+* Capture = trickle down elements
+* Bubbel = bubble up elements
