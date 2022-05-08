@@ -25,3 +25,17 @@ do {
 } while (condition)
 ```
 * code inside `do...while` is always executed at least once
+
+## Test Driven Development
+* Practice of writing automated tests that describe how your code should work before you actually write the code
+
+## Assignment 
+* Refer to `javascript-exercises` repo
+* Exercises 1-7
+
+## Knowledge Check
+* Array is list of values
+* Accessing array is through index
+* Break statement is used to break out of the loop
+* Continue is used to immediately proceed to next iteration of loop
+* Advantage of writing of automated tests makes have to run the ourselves over and over, saves more time
