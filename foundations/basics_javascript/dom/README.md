@@ -147,3 +147,86 @@ container.appendChild(content)
 ```
 ## Exercise
 * Refer to html, css, and javascript files
+
+## Events
+* Manipulating DOM dynamically or on demand
+* Alert hello word examples:
+```javascript
+<!-- the HTML file -->
+<button id="btn">Click Me</button>
+
+// the JavaScript file
+const btn = document.querySelector('#btn');
+btn.onclick = () => alert("Hello World");
+```
+* Only onclick
+
+```javascript
+<!-- the HTML file -->
+<button id="btn">Click Me Too</button>
+
+// the JavaScript file
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+  alert("Hello World");
+});
+```
+* Much more flexible, allowing multiple event listeners
+```javascript
+<!-- the HTML file -->
+<!-- METHOD 1 -->
+<button onclick="alertFunction()">CLICK ME BABY</button>
+
+// javascript file
+function alertFunction() {
+  alert("YAY! YOU DID IT!");
+}
+
+// METHOD 2
+btn.onclick = alertFunction;
+
+// METHOD 3
+btn.addEventListener('click', alertFunction);
+
+
+
+btn.addEventListener('click', function (e) {
+  console.log(e);
+});
+
+btn.addEventListener('click', function (e) {
+  e.target.style.background = 'blue';
+});
+```
+* Named functions as well
+* `e` in function is object that referecnes the event itself
+* Can access event's target, the DOM node that was clicked
+
+### Attaching listeners to groups of nodes
+* Can use `querySelectorAll('selector')` 
+* Add listener to all by iterating
+
+```javascript
+<div id="container">
+    <button id="1">Click Me</button>
+    <button id="2">Click Me</button>
+    <button id="3">Click Me</button>
+</div>
+
+// buttons is a node list. It looks and acts much like an array.
+const buttons = document.querySelectorAll('button');
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+
+  // and for each one we add a 'click' listener
+  button.addEventListener('click', () => {
+    alert(button.id);
+  });
+});
+```
+* Other useful events
+    * click
+    * dblclick
+    * keydown
+    * keyup
