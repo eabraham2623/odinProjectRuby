@@ -116,3 +116,14 @@ frankie.introduceSelf();
 * Some, checks to see if an array has at least one entry where function returns true on a condition
 * Every, checks to see if every element 
 * Find, returns the first element that fulfills function condition
+
+## Practice
+* Javascript exercises
+08 - 12
+
+## Knowledge Check
+* Difference between objects and arrays
+    * Objects have key values
+* Accessing object properties through dot notation or square bracket notation
+* map() is useful for generating an array that takes each element and spits out the functional output used in the map
+* reduce() is useful for summation or "summarizing" the whole array with a function
