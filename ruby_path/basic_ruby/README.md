@@ -196,3 +196,13 @@ irb :001 > {:dog => 'barks', :cat => 'meows', :pig => 'oinks'}[:cat]
 
 # Assignment
 Refer to Ruby exercise repo
+
+# Knowledge Check
+* Method to convert float to int is `.to_i`
+* Method to convert int to flot is `.to_fl`
+
+* Double quotes allows string interpolation
+* can use `concat` method, `<<`, and `+` to concat
+* method to uppercase all letters is `upcase`
+* Use `split` method to split up strings into arrays
+* Symbols are considered to be immutable, created using `:`
