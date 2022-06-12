@@ -140,9 +140,17 @@ nil.to_s      #=> ""
 ## Symbols
 * Symbols are stored in memory only once, can be faster than Strings in certain situations
 * Symbols are useful in keys in hashes
+* immutable
 
 ### Create symbol
 `:my_symbol`
+
+```ruby
+# Examples of symbols
+:name
+:a_symbol
+:"surprisingly, this is also a symbol"
+```
 
 ### Symbols vs Strings
 * Example below shows how symbols are stored in memory
@@ -154,8 +162,37 @@ nil.to_s      #=> ""
 :symbol.object_id == :symbol.object_id    #=> true
 ```
 
+
+
 ## Booleans
 * `true` and `false`
 * `nil` represents nothing
 
+## Literals
+* Literals are notations that let you represent a fixed value in source code
+```ruby
+'Hello, world!'          # string literal
+375                      # integer literal
+3.141528                 # float literal
+true                     # boolean literal
+{ 'a' => 1, 'b' => 2 }   # hash literal
+[ 1, 2, 3 ]              # array literal
+:sym                     # symbol literal
+nil                      # nil literal
+```
+
+## Modulo vs Remainder
+* Modulo operations return a positive integer when the second operand is positive, and a negative integer when the second operand is negative.
+* Remainder operations return a positive integer when the first operand is positive, and a negative integer when the first operand is negative.
+
+## Expressions
+* Expressions in Ruby always return something `=>`
+
+## Hashes
+```ruby
+irb :001 > {:dog => 'barks', :cat => 'meows', :pig => 'oinks'}[:cat]
+=> "meows"
+```
+
 # Assignment
+Refer to Ruby exercise repo
