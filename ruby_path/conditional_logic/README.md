@@ -92,4 +92,29 @@ end
 age = 19
 response = age < 18 ? "You still have your entire life ahead of you." : "You're all grown up."
 puts response #=> "You're all grown up."
-```  
+```
+
+## Assignment
+```ruby
+# case_with_no_arg_statement.rb
+
+a = 5
+
+case
+when a == 5
+  puts "a is 5"
+when a == 6
+  puts "a is 6"
+else
+  puts "a is neither 5, nor 6"
+end
+```
+* In Ruby, every expression evaluates as `true` when used in flow control, except for `false` and `nil`
+  
+## Assignment
+* Boolean is true or false data type
+* Everything is true except for false or nil
+* Using `unless` if you want want `if !true`
+* Ternary operator:
+  * `true ? puts "true" : puts "false`
+* Case statement used when readable `if..else` is preferred
