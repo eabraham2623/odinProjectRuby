@@ -98,3 +98,17 @@ A method is a piece of code that is called by a name that is associated with an 
 A method is implicitly passed the object on which it was called.
 A method is able to operate on data that is contained within the class (remembering that an object is an instance of a class - the class is the definition, the object is an instance of that data).
 ```
+
+## Variable lessons
+* Variable itslef is not a "thing", it's jut a name for a thing
+* Overwritting previous values of variable names, reusing variable names
+* Ruby looks at the right side first of variable assignment first, evaluates and then sets variable to that value
+* `uppercase!` returns nil if unchanged
+  * Kind of used for conditional checks?
+* Symbols used as hasky keys, identify of the key that is important
+* If contents of object are important, use string
+* Symbols are used for naming things in the language: the names of classes, the names of methods 
+
+## Knowledge Check
+* Variables are used to provide storage for values that can change, assigning names to data
+* Name should be clear as possible, describe the variable's value
