@@ -104,3 +104,9 @@ while i < 6 do
   i += 1
 end
 ```
+## Knowledge Check
+* Loop allows you to do repeated operations
+* `loop` is infinite loop, requires `break`
+* `while` declare condition that decides to break it
+* `for` loops through a collection
+* `until` does an operation "until" condition is met
