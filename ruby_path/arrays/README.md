@@ -99,3 +99,9 @@ irb :004 > a
 irb :001 > teams = [['Joe', 'Steve'], ['Frank', 'Molly'], ['Dan', 'Sara']]
 => [["Joe", "Steve"], ["Frank", "Molly"], ["Dan", "Sara"]]
 ```
+* `map` creates and returns a new array
+* `product` method can be used to combine two arrays, combination of all elements
+```ruby
+irb :001 > [1, 2, 3].product([4, 5])
+=> [[1, 4], [1, 5], [2, 4], [2, 5], [3, 4], [3, 5]]
+```
