@@ -105,3 +105,7 @@ irb :001 > teams = [['Joe', 'Steve'], ['Frank', 'Molly'], ['Dan', 'Sara']]
 irb :001 > [1, 2, 3].product([4, 5])
 => [[1, 4], [1, 5], [2, 4], [2, 5], [3, 4], [3, 5]]
 ```
+```ruby
+users = %w(john david peter)
+```
+* Can initialize array data with `%w` to avoid having to use quotes
