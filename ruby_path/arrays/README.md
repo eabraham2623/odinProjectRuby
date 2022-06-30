@@ -109,3 +109,9 @@ irb :001 > [1, 2, 3].product([4, 5])
 users = %w(john david peter)
 ```
 * Can initialize array data with `%w` to avoid having to use quotes
+
+## Assignment
+* ruby-exercises arrary
+
+## Knowledge Check
+* Array is a list of data, useful to organize data and stuff
