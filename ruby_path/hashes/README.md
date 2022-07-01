@@ -89,3 +89,8 @@ japanese_cars[:honda]   #=> "Accord"
 
 
 * hash exercises
+
+## Knowledge Check
+* arrays are ordered, hashes provide quick access to values given a key
+  * Not index based
+* Symbols are more performant than strings
