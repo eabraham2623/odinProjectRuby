@@ -112,4 +112,8 @@ puts a
 * `object.method`
 
 * `p` is useful when you are trying to understand what your code does, e.g. when you are trying to figure out a certain error.
-* 
+
+## Knowledge Check
+* default parameters are set by `parameter = <value>`
+* Predicate methods are meant to return true false
+* Bang methods change the value of what is being called on, reassignment
