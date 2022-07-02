@@ -94,3 +94,22 @@ puts whisper #=> "HELLO EVERYBODY"
 puts whisper.downcase! #=> "hello everybody"
 puts whisper #=> "hello everybody"
 ```
+## Assignment
+### Method Defintion and Local Variable Socpe
+```ruby
+a = 5
+
+def some_method
+  a = 3
+end
+
+puts a
+```
+* Value of `a` is still 5
+
+### Calling Methods
+* Methods that belong to an object are used by adding `.`
+* `object.method`
+
+* `p` is useful when you are trying to understand what your code does, e.g. when you are trying to figure out a certain error.
+* 
