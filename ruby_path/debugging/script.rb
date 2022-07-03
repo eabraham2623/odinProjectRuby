@@ -1,13 +1,13 @@
 require 'pry-byebug'
 
-def yell_greeting(string)
-  name = string
+def isogram?(string)
+  original_length = string.length
+  string_array = string.downcase.split
 
   binding.pry
 
-  name = name.upcase
-  greeting = "WASSAP, #{name}!"
-  puts greeting
+  unique_length = string_array.uniq.length
+  original_length == unique_length
 end
 
-yell_greeting("bob")
+isogram?("Odin")
