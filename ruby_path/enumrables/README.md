@@ -197,3 +197,21 @@ invited_friends(friends)
 * `#each_with_index` passes not just the current item but whatever position in the array it was located in.
 * `#select` returns a new object (e.g. array) filled with only those original items where the block you gave it returned true
 * `#map` returns a new array filled with whatever gets returned by the block each time it runs.
+
+## Things I got confused but cleared up now
+1. Why did 2nd `result` need to be in the `reduce` hash example?
+```ruby
+votes = ["Bob's Dirty Burger Shack", "St. Mark's Bistro", "Bob's Dirty Burger Shack"]
+
+votes.reduce(Hash.new(0)) do |result, vote|
+  result[vote] += 1
+  return result # don't do this though
+end
+#=> {"Bob's Dirty Burger Shack"=>2, "St. Mark's Bistro"=>1}
+```
+* Whole hash of `result`
+2. Why is it that, we do not need to write the sum as a return in this example then:
+   * Because you want the return value to be `sum + number` anyway
+   * Because that is why you want `sum` to be in the next iteration
+   * In the hash example you don’t want the return value of `result[value] += 1` to be fed into `result` the in the next iteration
+   * Because in a reduce statement the value returned get's passed to the next iteration
