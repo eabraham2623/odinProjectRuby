@@ -215,3 +215,12 @@ end
    * Because that is why you want `sum` to be in the next iteration
    * In the hash example you don’t want the return value of `result[value] += 1` to be fed into `result` the in the next iteration
    * Because in a reduce statement the value returned get's passed to the next iteration
+
+## Knowledge Check
+* `#each` method performs loop over the object, returns original object
+* `each_with_index` gives object and index
+* `#map` performs operation on each item, returns new arrary
+* `#select` returns a filtered array where it is returned true
+* `#reduce` accumulates array to give a "summary" of arrary
+* `#each` is a one liner wheras `each, do...end` is multipline
+* bang methods of enumerables are destructive, are unpredictable.
