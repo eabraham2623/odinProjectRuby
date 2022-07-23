@@ -2,7 +2,7 @@ def trueShift(shiftValue)
     return shiftValue % 26
 end
 
-def shiftUpperCase(letterASCII, trueShift)
+def shiftUpperCaseLetter(letterASCII, trueShift)
     if (letterASCII + trueShift > 90)
         shiftedASCII = (letterASCII - 26) + trueShift
         return shiftedASCII
@@ -10,7 +10,7 @@ def shiftUpperCase(letterASCII, trueShift)
     return shiftedASCII = letterASCII + trueShift
 end
 
-def shiftLowerCase(letterASCII, trueShift)
+def shiftLowerCaseLetter(letterASCII, trueShift)
     if (letterASCII + trueShift > 122)
         shiftedASCII = (letterASCII - 26) + trueShift
         return shiftedASCII
@@ -23,11 +23,13 @@ def caesarCipher(plainString, shiftValue)
     encodedText = ""
 
     plainString.each_byte do |ascii|
+        # if ascii is lower case letter
         if ascii.between?(65, 90)
-            shiftedLetter = shiftUpperCase(ascii, trueShiftValue).chr
+            shiftedLetter = shiftUpperCaseLetter(ascii, trueShiftValue).chr
             encodedText = encodedText + shiftedLetter
+        # if ascii is upper case letter
         elsif ascii.between?(97,122)
-            shiftedLetter = shiftLowerCase(ascii, trueShiftValue).chr
+            shiftedLetter = shiftLowerCaseLetter(ascii, trueShiftValue).chr
             encodedText = encodedText + shiftedLetter
         else
             encodedText = encodedText + ascii.chr
