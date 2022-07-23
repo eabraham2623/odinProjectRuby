@@ -171,3 +171,4 @@ vehicles
 vehicles.collect { |name, data| name if data[:year] >= 2020 }
 #=> [nil, :caleb, :dave]
 ```
+## Assignment
