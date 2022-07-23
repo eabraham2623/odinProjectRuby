@@ -17,3 +17,21 @@ def shiftLowerCase(letterASCII, trueShift)
     end
     return shiftedASCII = letterASCII + trueShift
 end
+
+def caesarCipher(plainString, shiftValue)
+    trueShiftValue = trueShift(shiftValue)
+    encodedText = ""
+
+    plainString.each_byte do |ascii|
+        if ascii.between?(65, 90)
+            shiftedLetter = shiftUpperCase(ascii, trueShiftValue).chr
+            encodedText = encodedText + shiftedLetter
+        elsif ascii.between?(97,122)
+            shiftedLetter = shiftLowerCase(ascii, trueShiftValue).chr
+            encodedText = encodedText + shiftedLetter
+        else
+            encodedText = encodedText + ascii.chr
+        end 
+    end
+    return encodedText
+end
