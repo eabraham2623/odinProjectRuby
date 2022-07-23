@@ -45,5 +45,5 @@ plaintext = gets
 print "Enter shift factor: "
 userShiftFactor = gets
 shiftFactor = userShiftFactor.to_i
-print "Encoded String: "
+print "Encoded Text: "
 puts caesarCipher(plaintext, shiftFactor)
