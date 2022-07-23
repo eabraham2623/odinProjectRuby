@@ -37,3 +37,13 @@ def caesarCipher(plainString, shiftValue)
     end
     return encodedText
 end
+
+## MAIN
+puts "###### CAESAR CIPHER PROGRAM #######"
+print "Enter plaintext: "
+plaintext = gets
+print "Enter shift factor: "
+userShiftFactor = gets
+shiftFactor = userShiftFactor.to_i
+print "Encoded String: "
+puts caesarCipher(plaintext, shiftFactor)
