@@ -172,3 +172,21 @@ vehicles.collect { |name, data| name if data[:year] >= 2020 }
 #=> [nil, :caleb, :dave]
 ```
 ## Assignment
+* nested_collections exercises
+
+### Things I learned
+* Ruby does not `++` incrementer/decrementer
+* Make hash key symbols, better performance when accessing them using a variable
+
+## Knowledge Check
+* Nested array is multi dimensional array, useful to store positional data
+* Nested hash is a multi dimensional hash
+* `nested_array[0][1]`
+* `nested_hash[:main_key][:nested_key]`
+* Adding elements to nested arrary `nested_array[0].push("5")`
+* Adding elements to nested hash `nested_hash[:new_nested_key] = new_value`
+* Using `pop` to delete elements from nested array
+* Using `delete` to delete data from nested hash
+* `Array.new(2) { Array.new(2)}` - not mutable
+* Using `each_with_index`, nested to iterate over nested array
+* Using hash methods to loop over nested hashes
