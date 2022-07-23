@@ -49,3 +49,7 @@ fruits.none? { |fruit| fruit.length > 6 }
 * returns true if none of the elements match the condition
 
 ## Assignment
+* exercises repo
+
+## Knowledge Check
+* Question mark is there in method names to indicate predicate method, `true` or `false` result
