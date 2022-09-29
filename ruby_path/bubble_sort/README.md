@@ -24,5 +24,3 @@ Until `sorted` is true:
             index = 0
             swapped = false
 ```
-
-`[2, 3, 1, 5, 8]`
