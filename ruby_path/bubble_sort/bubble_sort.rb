@@ -34,5 +34,3 @@ def bubble_sort(arr)
 
     return arr
 end
-
-print(bubble_sort([0,38,0,8,238,918,21841,424]))
