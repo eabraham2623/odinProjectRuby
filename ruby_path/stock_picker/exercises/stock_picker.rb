@@ -26,4 +26,4 @@ def stock_picker(arr)
     return buy_and_sell_days
 end
 
-puts(stock_picker([38,808,342,8099]).join(','))
+# MAIN
