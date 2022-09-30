@@ -141,3 +141,91 @@ end
 my_computer = Computer.new("eabraham", "bad")
 puts(my_computer.create("hello"))
 ```
+### CodeAcademy Section 10
+#### Public vs Private Methods
+
+```ruby
+class Dog
+  def initialize(name, breed)
+    @name = name
+    @breed = breed
+  end
+
+  public
+  def bark()
+    puts "Woof!"
+  end
+
+  private
+  def id()
+    @id_number = 12345
+  end
+
+end
+```
+
+```ruby
+class Account
+  attr_reader :name
+  attr_reader :balance
+  def initialize(name, balance=100)
+    @name = name
+    @balance = balance
+  end
+  
+  public
+  def display_balance(pin_number)
+    if pin_number == pin()
+      puts "Balance: $#{@balance}."
+    else
+      puts pin_error()
+    end
+  end
+
+  private
+  def pin()
+    @pin = 1234
+  end
+  def pin_error()
+    return "Access denied: incorrect PIN."
+  end 
+
+  public
+  def withdraw(pin_number, amount)
+    if pin_number == pin()
+      @balance -= amount
+      puts "Withdrew #{amount}. New balance: $#{@balance}"
+    else
+      puts pin_error()
+    end
+  end
+
+end
+
+checking_account = Account.new("Emil", 400)
+checking_account.withdraw(1234, 1)
+```
+
+* Private methods can only be accessed within the Class and Class descendents only (Within the class definitions)
+#### `attr_reader`, `attr_writer`, and `attr_accessor`
+* Read and write to instance variables
+```ruby
+class Person
+  attr_accessor :name
+end
+
+person = Person.new
+person.name = "Dennis"
+person.name # => "Dennis"
+```
+#### Modules
+* Purpose of Modules is to separate methods and constants into named spaces
+* `Math::PI` outputs `PI` constant from Math module
+* Use `require 'module_name'` to import non built in Ruby modules
+  * Bring in the contents of that file
+* `include` in Ruby means extending a Class or Module's functionality
+  * Mixes modules at instance level
+  * Instance Methods
+* `extends` 
+  * Class methods
+
