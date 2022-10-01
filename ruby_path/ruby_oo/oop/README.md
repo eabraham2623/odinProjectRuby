@@ -229,3 +229,148 @@ person.name # => "Dennis"
 * `extends` 
   * Class methods
 
+### Ruby World
+#### History of Ruby
+* Matz wanted a scripting language that was object oriented
+
+### Launch School OOP Book
+* Objects were meant to be containers as applications grew in complexity
+* Encapsulation
+  * Data protection
+  * Creating boundaries
+* Polymorphism
+  * Different types of data to respond to different interface
+* Inheritance
+  * Classes getting behaviors of another class
+* Modules
+  * Have polymorphic structure
+  * Mixed in with a class using `include` 
+    * Known as `mixin`
+* Class ancestors in Ruby:
+```ruby
+module Speak
+  def speak(sound)
+    puts "#{sound}"
+  end
+end
+
+class GoodDog
+  include Speak
+end
+
+class HumanBeing
+  include Speak
+end
+
+puts "---GoodDog ancestors---"
+puts GoodDog.ancestors
+puts ''
+puts "---HumanBeing ancestors---"
+puts HumanBeing.ancestors
+```
+
+```ruby
+---GoodDog ancestors---
+GoodDog
+Speak
+Object
+Kernel
+BasicObject
+
+---HumanBeing ancestors---
+HumanBeing
+Speak
+Object
+Kernel
+BasicObject
+```
+* Use classes to create objects
+* Classes have:
+  * States
+    * Track attributes
+  * Behaviors
+    * What they are capable of doing
+* Instance variables keep track of state
+* Instance methods expose behavior for objects
+* Accessor methods and setters
+```ruby
+class GoodDog
+  def initialize(name)
+    @name = name
+  end
+
+  def get_name
+    @name
+  end
+
+  def set_name=(name)
+    @name = name
+  end
+
+  def speak
+    "#{@name} says arf!"
+  end
+end
+
+sparky = GoodDog.new("Sparky")
+puts sparky.speak
+puts sparky.get_name
+sparky.set_name = "Spartacus"
+puts sparky.get_name
+```
+* Ruby syntatical sugar with `set_name=` method
+* Rubyists like to name getter and setter methods with the same name
+```ruby
+class GoodDog
+  def initialize(name)
+    @name = name
+  end
+
+  def name                  # This was renamed from "get_name"
+    @name
+  end
+
+  def name=(n)              # This was renamed from "set_name="
+    @name = n
+  end
+
+  def speak
+    "#{@name} says arf!"
+  end
+end
+
+sparky = GoodDog.new("Sparky")
+puts sparky.speak
+puts sparky.name            # => "Sparky"
+sparky.name = "Spartacus"
+puts sparky.name            # => "Spartacus"
+```
+* `attr_accessor` makes getters and setters concise in Ruby world
+
+```ruby
+class GoodDog
+  attr_accessor :name, :height, :weight
+
+  def initialize(n, h, w)
+    @name = n
+    @height = h
+    @weight = w
+  end
+
+  # Instance method used here instead of variable
+  def speak
+    "#{name} says arf!"
+  end
+
+  def change_info(n, h, w)
+    self.name = n
+    self.height = h
+    self.weight = w
+  end
+
+  def info
+    "#{name} weighs #{weight} and is #{height} tall."
+  end
+end
+```
+* To distinguish from creatinga a local variable, we need to use `self.<var>` to let Ruby know we are calling a method
