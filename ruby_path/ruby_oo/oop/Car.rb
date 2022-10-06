@@ -2,11 +2,13 @@ class MyCar
     attr_accessor :speed
     attr_accessor :color
     attr_reader   :year
+    @@count = 0
     def initialize(year, color, model)
         @year = year
         @color = color
         @model = model
         @speed = 0
+        @@count +=1
     end
 
     def speedUp(mph)
@@ -24,6 +26,10 @@ class MyCar
     def spray_paint(new_color)
         self.color = new_color
     end
+    
+    def get_total_count()
+        return @@count
+    end
 end
 
 emil_car = MyCar.new(2019, "Grey", "Subaru Legacy")
@@ -40,3 +46,7 @@ emil_car.color = "green"
 puts(emil_car.color)
 emil_car.spray_paint("Yellow")
 puts(emil_car.color)
+puts(emil_car.get_total_count)
+bat_car = MyCar.new(2018, "Grey", "Subaru Legacy")
+puts(bat_car.get_total_count)
+puts(emil_car.get_total_count)
