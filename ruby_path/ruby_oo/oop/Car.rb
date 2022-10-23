@@ -30,6 +30,10 @@ class MyCar
     def get_total_count()
         return @@count
     end
+
+    def self.get_count()
+        return @@count
+    end
 end
 
 emil_car = MyCar.new(2019, "Grey", "Subaru Legacy")
@@ -50,3 +54,4 @@ puts(emil_car.get_total_count)
 bat_car = MyCar.new(2018, "Grey", "Subaru Legacy")
 puts(bat_car.get_total_count)
 puts(emil_car.get_total_count)
+puts MyCar.get_count

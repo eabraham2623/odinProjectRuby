@@ -374,3 +374,57 @@ class GoodDog
 end
 ```
 * To distinguish from creatinga a local variable, we need to use `self.<var>` to let Ruby know we are calling a method
+
+#### Classes and Objects Pt.2
+##### Class Methods
+* Methods that can be call directly on class itself without having to instatntiate any objects
+* Need to use `self`
+```ruby
+# ... rest of code ommitted for brevity
+
+def self.what_am_i         # Class method definition
+  "I'm a GoodDog class!"
+end
+```
+
+```ruby
+GoodDog.what_am_i          # => I'm a GoodDog class!
+```
+* Class methods don't need to deal with state
+
+```ruby
+class GoodDog
+  @@number_of_dogs = 0
+
+  def initialize
+    @@number_of_dogs += 1
+  end
+
+  def self.total_number_of_dogs
+    @@number_of_dogs
+  end
+end
+
+puts GoodDog.total_number_of_dogs   # => 0
+
+dog1 = GoodDog.new
+dog2 = GoodDog.new
+
+puts GoodDog.total_number_of_dogs   # => 2
+```
+* Can get count of number of Object instances through class variables
+
+```ruby
+class GoodDog
+  # ... rest of code omitted for brevity
+
+  def what_is_self
+    self
+  end
+end
+
+sparky = GoodDog.new('Sparky', '12 inches', '10 lbs')
+p sparky.what_is_self
+# => #<GoodDog:0x007f83ac062b38 @name="Sparky", @height="12 inches", @weight="10 lbs">
+```
+* Inner workings of `self`
