@@ -34,6 +34,14 @@ class MyCar
     def self.get_count()
         return @@count
     end
+
+    def self.gas_mileage(gallons, miles)
+        return miles/gallons
+    end
+
+    def to_s
+        return "This Car was made in #{self.year}, it's model is a #{@model} and it's color is  #{self.color}"
+    end
 end
 
 emil_car = MyCar.new(2019, "Grey", "Subaru Legacy")
@@ -55,3 +63,6 @@ bat_car = MyCar.new(2018, "Grey", "Subaru Legacy")
 puts(bat_car.get_total_count)
 puts(emil_car.get_total_count)
 puts MyCar.get_count
+puts(MyCar.gas_mileage(5,30))
+puts(emil_car.to_s)
+puts(emil_car)
