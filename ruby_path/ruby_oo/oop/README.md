@@ -624,4 +624,11 @@ end
 ```
 * Object is an instance of a class
 * Class makes objects, it is a factory
-* 
+
+# Knowledge Check
+* A class is a definition of an object, it defines attributes and behaviors of an object
+* Inheritance is the concept of a class getting retrieving the behavior and variables of classes that are considered to be it's ancestors
+* Scope is where you can access variables or methods
+* Instance variables describe a current object's state
+* Class variables are shared between all instances
+* Instance variables are locked to only one instance
