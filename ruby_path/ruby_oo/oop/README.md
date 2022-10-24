@@ -571,3 +571,57 @@ end
 ```
 * Classes within modules
 * Private methods are only accessible within the class
+* Class methods have access to other class methods and class variables, but no access to instance methods/variables
+* Instance methods can call other instance methods, instance variables, class methods, or class variables
+* In Ruby, a class can only have one parent
+* Can add objects of another class to another object
+```ruby
+class Cinema  
+  attr_accessor :name, :location  
+
+  def initialize(name, location)
+      @name = name
+      @location = location
+      @movies = []
+  end
+  def add_movie(movie)
+    @movies << movie
+    movie.cinema = self
+  end
+end
+
+class Movie  
+
+  attr_accessor :title, :showtime, :cinema  
+  @@all = []  
+
+  def initialize(title, showtime)
+      @title = title
+      @showtime = showtime
+      @@all << self  
+  end
+end
+```
+## Exceptions and Error Handling
+* `begin`, `rescue`, `else` keywords in error handling
+```ruby
+values = [42, 'a', 'r', 9, 5, 10022, 8.7, "sharon", "Libya", "Mars", "12", 98, rand + rand, {:dog=>'cat'}, 100, nil, 200.0000, Object, 680, 3.14, "Steve", 78, "Argo"].shuffle
+
+while values.length > 0
+  a = values.pop
+  b = values.pop
+  
+
+  begin
+     a + b
+  rescue
+     puts "Could not add variables a (#{a.class}) and b (#{b.class})"
+  else
+     puts "a + b is #{a + b}"
+  end
+  
+end  
+```
+* Object is an instance of a class
+* Class makes objects, it is a factory
+* 
