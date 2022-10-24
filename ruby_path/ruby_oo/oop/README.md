@@ -428,3 +428,146 @@ p sparky.what_is_self
 # => #<GoodDog:0x007f83ac062b38 @name="Sparky", @height="12 inches", @weight="10 lbs">
 ```
 * Inner workings of `self`
+
+#### Inheritance
+```ruby
+class Animal
+  def speak
+    "Hello!"
+  end
+end
+
+class GoodDog < Animal
+end
+
+class Cat < Animal
+end
+
+sparky = GoodDog.new
+paws = Cat.new
+puts sparky.speak           # => Hello!
+puts paws.speak             # => Hello!
+```
+* `<` is used to signify class is inheriting from another class
+
+```ruby
+class Animal
+  def speak
+    "Hello!"
+  end
+end
+
+class GoodDog < Animal
+  attr_accessor :name
+
+  def initialize(n)
+    self.name = n
+  end
+
+  def speak
+    "#{self.name} says arf!"
+  end
+end
+
+class Cat < Animal
+end
+
+sparky = GoodDog.new("Sparky")
+paws = Cat.new
+
+puts sparky.speak           # => Sparky says arf!
+puts paws.speak             # => Hello!
+```
+* Overriding `speak` method at the descendent level
+* When using `super` within method, it searches method lookup path for method with same name then invokes it
+```ruby
+class Animal
+  def speak
+    "Hello!"
+  end
+end
+
+class GoodDog < Animal
+  def speak
+    super + " from GoodDog class"
+  end
+end
+
+sparky = GoodDog.new
+sparky.speak        # => "Hello! from GoodDog class"
+```
+```ruby
+class BadDog < Animal
+  def initialize(age, name)
+    super(name)
+    @age = age
+  end
+end
+
+BadDog.new(2, "bear")        # => #<BadDog:0x007fb40b2beb68 @age=2, @name="bear">
+```
+
+```ruby
+module Swimmable
+  def swim
+    "I'm swimming!"
+  end
+end
+
+class Animal; end
+
+class Fish < Animal
+  include Swimmable         # mixing in Swimmable module
+end
+
+class Mammal < Animal
+end
+
+class Cat < Mammal
+end
+
+class Dog < Mammal
+  include Swimmable         # mixing in Swimmable module
+end
+```
+* A common naming convention for Ruby is to use the "able" suffix on whatever verb describes the behavior that the module is modeling
+* If there's an "is-a" relationship, class inheritance is usually the correct choice. If there's a "has-a" relationship, interface inheritance is generally a better choice. For example, a dog "is an" animal and it "has an" ability to swim. 
+
+```ruby
+class GoodDog < Animal
+  include Swimmable
+  include Climbable
+end
+
+puts "---GoodDog method lookup---"
+puts GoodDog.ancestors
+```
+* Method lookup
+```ruby
+---GoodDog method lookup---
+GoodDog
+Climbable
+Swimmable
+Animal
+Walkable
+Object
+Kernel
+BasicObject
+```
+```ruby
+module Mammal
+  class Dog
+    def speak(sound)
+      p "#{sound}"
+    end
+  end
+
+  class Cat
+    def say_name(name)
+      p "#{name}"
+    end
+  end
+end
+```
+* Classes within modules
+* Private methods are only accessible within the class

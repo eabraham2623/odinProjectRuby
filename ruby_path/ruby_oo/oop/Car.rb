@@ -1,4 +1,19 @@
-class MyCar
+class Vehicle
+    @@super_count = 0
+    def self.get_super_count
+        return @@super_count
+    end
+    def initialize()
+        @@super_count += 1
+    end
+end 
+
+class MyTruck < Vehicle
+    TRUCK = "I AM A TRUCK"
+end
+
+class MyCar < Vehicle
+    CAR = "I AM A CAR"
     attr_accessor :speed
     attr_accessor :color
     attr_reader   :year
@@ -66,3 +81,4 @@ puts MyCar.get_count
 puts(MyCar.gas_mileage(5,30))
 puts(emil_car.to_s)
 puts(emil_car)
+puts(Vehicle.get_super_count)
