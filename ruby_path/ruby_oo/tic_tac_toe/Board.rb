@@ -5,7 +5,7 @@ class Board
   attr_accessor :entries
 
   def initialize
-    @entries = []
+    @entries = {}
   end
 
   def print_divide_lines
