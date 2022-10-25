@@ -1,24 +1,26 @@
 class Board
-    attr_reader :size
-    def initialize(size)
-        @size = size
+    attr_accessor :entries
+    def initialize()
+        @entries = []
     end
     
-    def printBoard()
-        boardRows = (0..self.size-1)
-        boardColumns = boardRows
-        lastColumn = self.size - 1
-        boardRows.each do |row|
-            boardColumns.each do |column|
-                if column == lastColumn
-                    print("_")
-                else
-                    print("_|")
-                end
+    def printDivideLines()
+        puts('---------')
+    end
+
+    def printEmptyEntries()
+        puts('- | - | -')
+    end
+    def printEmptyBoard()
+        boardRowRange = (0..4)
+        boardRowRange.each do | row |
+            if row % 2 == 0
+                printEmptyEntries()
+            else
+                printDivideLines()
             end
-            puts("")
         end
     end
 end
-board = Board.new(3)
-board.printBoard()
+board = Board.new()
+board.printEmptyBoard()
