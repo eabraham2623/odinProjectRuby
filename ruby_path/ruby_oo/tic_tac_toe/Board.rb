@@ -43,7 +43,7 @@ class Board
     elsif true_column % 3 == 2
       print(' - |')
     else
-      print(' -')
+      print(" -\n")
     end
   end
 
@@ -59,15 +59,13 @@ class Board
   end
 
   def print_new_board
-    board_row_range = (0..4)
-    board_column_range = (0..2)
-    board_row_range.each do |row|
-      if row.even?
-        board_column_range.each do |column|
-          print_entries(entries, column)
-        end
-      else
+    board_range = (0..8)
+    board_range.each do |cellIndex|
+      if cellIndex == 2 || cellIndex == 5
+        print_entries(entries, cellIndex)
         print_divide_lines
+      else
+        print_entries(entries, cellIndex)
       end
     end
   end
@@ -75,9 +73,11 @@ end
 board = Board.new
 board.print_empty_board
 
-board.add_entry(Entry.new('X', 3))
-puts(board.entries)
-board.add_entry(Entry.new('O', 4))
-puts(board.entries)
-
-board.print_new_board
+i = 1
+while i <= 9
+  puts("==============#{i}============")
+  board.add_entry(Entry.new('X',i))
+  puts(board.entries)
+  board.print_new_board
+  i+=1
+end
